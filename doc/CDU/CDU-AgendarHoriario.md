@@ -35,8 +35,8 @@ Não se aplica
 
 ## Fluxo Principal
 
-1. O usuário acessa o sistema
-1. O sistema exibe a tela inicial contendo uma opção para login e um formulário de pesquisa
+_Após o caso de uso [CDU-AcessarSistema]_
+
 1. O usuário preenche o campo de pesquisa e envia
 1. O sistema exibe a tela com resultados da pesquisa que contém estabelecimentos, serviços e  opções de filtro
 1. O usuário acessa a página de um serviço do resultado da pesquisa
@@ -52,13 +52,13 @@ Não se aplica
 
 ## Fluxos Alternativos
 
-_**Alternativa ao passo 05**_
+_**Alternativa ao passo 03**_
 
 1. O usuário acessa a página do estabelecimento do resultado da pesquisa
 1. O sistema exibe a tela de detalhes do estabelecimento
 1. O usuário acessa um serviço
 
-_O caso de uso retorna ao passo 6 do fluxo principal._
+_O caso de uso retorna ao passo 4 do fluxo principal._
 
 ## Situações de Erro
 

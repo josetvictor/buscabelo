@@ -25,7 +25,8 @@ Não se aplica
 
 ## Fluxo Principal
 
-1. O estabelecimento acessa o sistema
+_Após o caso de uso [CDU-Login]()_
+
 1. O sistema exibe a página de dashboard
 1. O estabelecimento aciona um botão para criar novo serviço
 1. O sistema mostra um formulário contendo o nome do serviço, lista de profissionais e horários para agendamento
