@@ -25,14 +25,13 @@ Não se aplica
 
 ## Fluxo Principal
 
-_Após o caso de uso [CDU-Login]()_
+_Após o caso de uso [CDU-AcessarDashboard]_
 
-1. O sistema exibe a página de dashboard
 1. O estabelecimento aciona um botão para criar novo serviço
 1. O sistema mostra um formulário contendo o nome do serviço, lista de profissionais e horários para agendamento
 1. O estabelecimento envia as informações preenchidas no formulário
 1. O sistema exibe uma mensagem de confirmação de cadastro de serviço
-1. O sistema volta para a lista de serviços
+1. O sistema volta para a dashboard
 
 ## Fluxos Alternativos
 

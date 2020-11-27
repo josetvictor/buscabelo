@@ -6,7 +6,7 @@ O usuário escolhe um serviço e um horário disponível. Em seguida, um email �
 
 ## Atores
 
-- Usuário
+- Cliente
   - Humano
   - Primário
   - Ativo
@@ -35,12 +35,8 @@ Não se aplica
 
 ## Fluxo Principal
 
-_Após o caso de uso [CDU-AcessarSistema]_
+_Após o caso de uso [CDU-AcessarServico]_
 
-1. O usuário preenche o campo de pesquisa e envia
-1. O sistema exibe a tela com resultados da pesquisa que contém estabelecimentos, serviços e  opções de filtro
-1. O usuário acessa a página de um serviço do resultado da pesquisa
-1. O sistema exibe a tela de detalhes do serviço
 1. O usuário seleciona a opção "Agendar"
 1. O sistema mostra uma tela com um calendário
 1. O usuário seleciona um dia disponível
@@ -51,14 +47,6 @@ _Após o caso de uso [CDU-AcessarSistema]_
 1. O sistema exibe uma mensagem de confirmação de agendamento
 
 ## Fluxos Alternativos
-
-_**Alternativa ao passo 03**_
-
-1. O usuário acessa a página do estabelecimento do resultado da pesquisa
-1. O sistema exibe a tela de detalhes do estabelecimento
-1. O usuário acessa um serviço
-
-_O caso de uso retorna ao passo 4 do fluxo principal._
 
 ## Situações de Erro
 
