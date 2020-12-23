@@ -20,9 +20,9 @@ Devido a grande quantidade de estabelecimentos de beleza, diferentes serviços e
 
 Como em alguns bairros há uma grande quantidade de estabelecimentos de beleza e na cidade em geral há vários estabelecimentos de beleza que oferecem o mesmo serviço, o consumidor pode ficar em dúvida de onde ir e de qual é melhor. A ideia de comparar os preços de serviços é dar a opção ao consumidor de escolher um lugar em que ele se sinta confortável em pagar o preço que ele acha justo pelo serviço e qualidade do estabelecimento de beleza.
 
-###3.1.3 Dificuldade em agendar serviços e perda de tempo.
+### 3.1.3 Dificuldade em agendar serviços e perda de tempo.
 
-Alguns estabelecimentos de beleza possuem formas de agendamento de serviços de beleza, porém eles são lentos ou possuem dificuldade de usabilidade e experiências de usuário ruins. Outros estabelecimentos de beleza não fazem agendamentos e trabalham por ordem de chegada dos seus clientes e fazem-os desperdiçar tempo para ser atendido.
+Alguns estabelecimentos de beleza possuem formas de agendamento de serviços de beleza, porém eles são lentos ou possuem dificuldade de usabilidade e trás uma experiência de usuário negativa. Outros estabelecimentos de beleza não fazem agendamentos e trabalham por ordem de chegada dos seus clientes e fazem-os desperdiçar tempo para ser atendido.
 
 ## 4 - Escopo
 
@@ -83,10 +83,9 @@ Alguns estabelecimentos de beleza possuem formas de agendamento de serviços de 
 
 ## 7 - Regras de Negócios
 
--O agendamento estará disposto em faixas de horários personalizáveis pelo estabelecimento de beleza conforme a duração do serviço e a necessidade
--Um estabelecimento de beleza oferta ao menos um serviço
--Os serviços https://gitlab.devops.ifrn.edu.br/tads.cnat/pdsweb/2020.1/buscabelo.gitsão listados de acordo com a pesquisa feita
--Os serviços são listados de acordo com a pesquisa feita
+- O agendamento estará disposto em faixas de horários personalizáveis pelo estabelecimento de beleza conforme a duração do serviço e a necessidade.
+- Um estabelecimento de beleza oferta ao menos um serviço.
+- Os serviços são listados de acordo com a pesquisa feita.
 
 ## 8 - Glossário
 

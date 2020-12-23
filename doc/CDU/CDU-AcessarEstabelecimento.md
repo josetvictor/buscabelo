@@ -32,20 +32,19 @@ Não se aplica
 _Após o caso [CDU-BuscarEstabelecimentoServico]_
 
 1. O usuário acessa a página de um estabelecimento do resultado da pesquisa
-1. O sistema exibe a tela de detalhes do estabelecimento
 
 _**Ponto de extensão:**_
 [`CDU - Acessar Serviço`](./CDU-AcessarServico.md)
 
 ## Fluxos Alternativos
 
+Não se aplica
+
 ## Situações de Erro
 
 ### Texto Vazio Enviado
 
 Consequência: O caso de uso é reiniciado.
-
-## Regras de Negócio
 
 ## Diagrama
 

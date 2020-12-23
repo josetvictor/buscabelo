@@ -1,8 +1,8 @@
-# Cadastrar Serviços
+# Acessar Dashbiard do Estabelecimento
 
 ## Descrição
 
-Acessa a Dashboard do estabelecimento
+O estabelecimento autenticado tem acesso a dashboard de seu negocio.
 
 ## Atores
 
@@ -17,10 +17,11 @@ Não se aplica
 
 ## Pré-condições
 
-- Estar logado
+- Autenticado no sistema
 
 ## Pós-condições
 
+- Acesso a Dashboard do estabelecimento
 
 ## Fluxo Principal
 
@@ -32,7 +33,3 @@ _**Ponto de extensão:**_
 ## Fluxos Alternativos
 
 Não se aplica
-
-## Situações de Erro
-
-## Regras de Negócio

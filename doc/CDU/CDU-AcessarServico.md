@@ -2,7 +2,7 @@
 
 ## Descrição
 
-O usuário insere um texto numa caixa dedicada para busca, é retornado os resultados da pesquisa e o usuário acessa um estabelecimento
+O usuário insere um texto numa caixa dedicada para busca, é retornado os resultados da pesquisa e o usuário acessa um serviço
 
 ## Atores
 
@@ -25,8 +25,9 @@ Não se aplica
 
 ## Fluxo Principal
 
+_Após o caso [CDU-BuscarEstabelecimentoServico]_
+
 1. O usuário acessa a página de um serviço
-1. O sistema exibe a tela de detalhes do serviço
 
 __**Ponto de extensão:**_
 [`CDU - Agendar horario`](./CDU-AgendarHorario.md)

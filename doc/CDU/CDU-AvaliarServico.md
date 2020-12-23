@@ -29,10 +29,5 @@ um agendamento
 3. O cliente seleciona uma avaliação
 4. O cliente é redirecionado para a página inicial do sistema
 
-## Fluxo Alternativo
-
-## Situação de Erro
-
 ## Regra de Negócio
 A nota do estebelecimento é calculada a partir da média entre numéro de avaliações e notas de cada avaliação. 
-
