@@ -16,7 +16,7 @@ downloads/
 eggs/
 .eggs/
 lib/
-lib64
+lib64/
 parts/
 sdist/
 var/
@@ -72,6 +72,7 @@ target/
 
 # pyenv
 .python-version
+pyvenv.cfg 
 
 # celery beat schedule file
 celerybeat-schedule
@@ -107,9 +108,11 @@ media/
 *.db
 *.pid
 
+share/
+include/
 # Ignore Django Migrations in Development if you are working on team
 
 # Only for Development only
-# **/migrations/**
-# !**/migrations
-# !**/migrations/__init__.py
+ **/migrations/**
+ !**/migrations
+ !**/migrations/__init__.py
