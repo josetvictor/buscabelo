@@ -84,7 +84,6 @@ DATABASES = {
         'PASSWORD':'7Tww5sLlrMIbHAx3ZN6U8C3UBAj_n2vU',
         'HOST':'motty.db.elephantsql.com',
         'PORT': '5432'
-
     }
 }
 

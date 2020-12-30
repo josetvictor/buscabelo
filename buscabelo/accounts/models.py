@@ -5,7 +5,6 @@ from django.core import validators
 from django.utils.translation import ugettext_lazy as _
 import re
 
-
 class UserManager(BaseUserManager):
 
 	def create_superuser(self, email, username, password, **extra_fields):
@@ -26,7 +25,6 @@ class UserManager(BaseUserManager):
 		if not email:
 		    raise ValueError(_('You must provide an email address'))
 
-		
 		email = self.normalize_email(email)
 		user = self.model(email=email, username=username, **extra_fields)
 		user.set_password(password)
@@ -65,7 +63,6 @@ class User(AbstractBaseUser, PermissionsMixin):
 	def get_short_name(self):
 		return self.username
 
-
 	def save(self, *args, **kwargs):
 	
 		if not self.id:
@@ -95,7 +92,6 @@ class Customer(User):
 class ProviderManager(models.Manager):
 	def get_queryset(self, *args, **kwargs):
 		return super().get_queryset(*args, **kwargs).filter(type=User.Types.PROVIDER)
-
 
 class Provider(User):
 	
@@ -141,5 +137,4 @@ class Appointment(models.Model):
 	time_done_at = models.DateTimeField(_('time the work was finished'))
 
 	canceled_at = models.DateTimeField(_('canceled at'), default = None, null = True)
-
 
