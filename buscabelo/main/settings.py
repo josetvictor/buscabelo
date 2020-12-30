@@ -21,12 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = '0ff1vl2nj4-#stv^#b0=18dy%)5+kat6j7fz)h$e0$#m8cyh4u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=True, cast=bool)
+DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = '*'
 
 AUTH_USER_MODEL = "accounts.User"
 
@@ -78,8 +78,13 @@ WSGI_APPLICATION = 'main.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'vaxiouke',
+        'USER': 'vaxiouke',
+        'PASSWORD':'7Tww5sLlrMIbHAx3ZN6U8C3UBAj_n2vU',
+        'HOST':'motty.db.elephantsql.com',
+        'PORT': '5432'
+
     }
 }
 
