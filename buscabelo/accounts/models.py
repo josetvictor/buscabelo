@@ -5,7 +5,6 @@ from django.core import validators
 from django.utils.translation import ugettext_lazy as _
 import re
 
-
 class UserManager(BaseUserManager):
 
 	def create_superuser(self, email, username, password, **extra_fields):
@@ -26,7 +25,6 @@ class UserManager(BaseUserManager):
 		if not email:
 		    raise ValueError(_('You must provide an email address'))
 
-		
 		email = self.normalize_email(email)
 		user = self.model(email=email, username=username, **extra_fields)
 		user.set_password(password)
@@ -37,9 +35,9 @@ class User(AbstractBaseUser, PermissionsMixin):
 
 	class Types(models.TextChoices):
 		CUSTOMER = "CUSTOMER", "Customer"
-		ESTABLISHMENT = "ESTABLISHMENT", "Establishment"
+		PROVIDER = "PROVIDER", "Provider"
 
-	base_type = Types.ESTABLISHMENT
+	base_type = Types.PROVIDER
 
 	type = models.CharField(
 	_("Type"), max_length=50, choices=Types.choices, default=base_type
@@ -64,7 +62,6 @@ class User(AbstractBaseUser, PermissionsMixin):
 
 	def get_short_name(self):
 		return self.username
-
 
 	def save(self, *args, **kwargs):
 	
@@ -92,52 +89,52 @@ class Customer(User):
 		verbose_name = _('customer')
 		verbose_name_plural = _('customers')
 
-class EstablishmentManager(models.Manager):
+class ProviderManager(models.Manager):
 	def get_queryset(self, *args, **kwargs):
-		return super().get_queryset(*args, **kwargs).filter(type=User.Types.ESTABLISHMENT)
+		return super().get_queryset(*args, **kwargs).filter(type=User.Types.PROVIDER)
 
-
-class Establishment(User):
+class Provider(User):
 	
 	rating_average = models.FloatField()
 
 	rating_number = models.IntegerField()
 
-	base_type = User.Types.ESTABLISHMENT
+	base_type = User.Types.PROVIDER
 	
 	description = models.TextField()
 
-	objects = EstablishmentManager()
+	objects = ProviderManager()
 
 	class Meta:
-		verbose_name = _('establishment')
-		verbose_name_plural = _('establishments')
+		verbose_name = _('provider')
+		verbose_name_plural = _('providers')
 
 
 class Comment(models.Model):
 	description = models.TextField(max_length=255)
-	establishment = models.ForeignKey(Establishment, on_delete=models.CASCADE)
+	provider = models.ForeignKey(Provider, on_delete=models.CASCADE)
 
 class Service(models.Model):
-	establishment = models.ForeignKey(Establishment, on_delete=models.CASCADE)
+	provider = models.ForeignKey(Provider, on_delete=models.CASCADE)
 	name = models.CharField(_('service name'), max_length=30 )
 	description = models.TextField( ('service description'), max_length=255)
 	value = models.FloatField()
 
-class EstablishmentGalleryImage(models.Model):
-	establishment = models.ForeignKey(Establishment, on_delete=models.CASCADE)
+class ProviderGalleryImage(models.Model):
+	provider = models.ForeignKey(Provider, on_delete=models.CASCADE)
 	image = models.ImageField()
 
-class Scheduling(models.Model):
+class Appointment(models.Model):
 
 	service = models.OneToOneField(Service, on_delete=models.CASCADE)
 
 	client = models.ForeignKey(Customer, on_delete=models.CASCADE)
 
-	date_scheduled_in = models.DateTimeField(_('date the scheduled was made'), default=timezone.now)
+	shcheduled_date= models.DateTimeField(_('scheduled date'))
 
-	date_scheduled_to = models.DateTimeField(_('scheduled date'))
+	appointment_date = models.DateTimeField(_('appointment date'))
 
-	scheduled_to = models.DateTimeField(_('scheduled date'))
+	time_done_at = models.DateTimeField(_('time the work was finished'))
 
-	time_done_at = models.DateTimeField( ('time the work was finished') )
+	canceled_at = models.DateTimeField(_('canceled at'), default = None, null = True)
+
